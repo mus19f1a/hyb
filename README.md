@@ -22,4 +22,4 @@ Yeni [konu](https://github.com/mus19f1a/hyb/issues) oluşturarak eklemek istedi�
 
 ## Lisans
 
-Bu çalışma GNU GPL v3.0 ile lisanslanmıştır. Detaylı bilgi için [Lisans](LICENSE) dısyasını inceleyebilirsiniz.
+Bu çalışma GNU GPL v3.0 ile lisanslanmıştır, detaylı bilgi için [Lisans](LICENSE) dosyasını inceleyebilirsiniz.
