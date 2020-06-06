@@ -14,7 +14,7 @@ read islem
 
 echo "islenilecek bölüm : ${bold}${islem}${normal}"
 
-if [ -z "$(lsblk | grep "${islem}\ ")" ]; then
+if [ -z "$(lsblk | grep "${islem}\ ")" ] ; then
 	echo "${bold}${red}Hata!${normal}\tBöyle bir bölüm bulunamadı..."
 	echo "\t\"${bold}${islem}${normal}\" mevcut değil."
 	exit
@@ -25,12 +25,12 @@ fi
 bagkon=$(sudo e2label /dev/$islem)
 
 
-if [ -z "$bagkon" ]; then
+if [ -z "$bagkon" ] ; then
 	echo "${cyan}Uyarı!${normal} Bölüme ait etiket mevcut değil."
 	echo "yeni bir etiket oluşturulsun mu? (E/h)"
 	read cevap
 	
-	if [ ${cevap} == 'E' or ${cevap} == '']; then
+	if [ ${cevap} == 'E' or ${cevap} == ''] ; then
 
 		echo "Etiket bilgisini giriniz.. (ab..zAB..Z012..9 only)"
 		read etiket
@@ -49,20 +49,20 @@ else
 fi
 
 
-if [ ! -d "/mnt" ]; then
+if [ ! -d "/mnt" ] ; then
 	echo "${bold}${red}Hata!${normal}\tKök dizininde \"mnt\" yer almadığından işleminize devam edemiyoruz.."
 	exit
-elif [ ! -d "/mnt/${bagkon}/" ]; then
+elif [ ! -d "/mnt/${bagkon}/" ] ; then
 	echo "Bağlantı konumu oluşturuluyor"
 	sudo mkdir /mnt/${bagkon}
 else
 	echo "${blue}Bilgi:${normal}\tBağlantı dizini zaten mevcut"
 	# dizine herhangi bir birim bağlı değilse devam
-	if [ ! -z "$(cat /proc/mounts | grep "/mnt/${bagkon}")" ]; then
+	if [ ! -z "$(cat /proc/mounts | grep "/mnt/${bagkon}")" ] ; then
 		echo "Dizine bağlantı yapılmış\n${bold}${islem}${normal} bölümü ayrılıyor"
 		sudo umount /dev/${islem}
 
-	elif [ ! -z "$(cat /proc/mounts | grep "/dev/${islem} /mnt/${bagkon}/")" ]; then
+	elif [ ! -z "$(cat /proc/mounts | grep "/dev/${islem} /mnt/${bagkon}/")" ] ; then
 		echo "${blue}Bilgi:${normal}\tBu birim zaten bağlanmış!"
 		# eklemeler yapılacak
 		# dizin yetkileri doğru mu?
@@ -71,7 +71,7 @@ else
 fi
 
 
-if [ ! -z "$(cat /proc/mounts | grep ${islem})" ]; then
+if [ ! -z "$(cat /proc/mounts | grep ${islem})" ] ; then
 	echo "${yellow}UYARI:${normal}\tSeçtiğiniz bölüm kullanılıyor.."
 	echo "Bu kısım henüz kodlanmadı"
 	# Birimi hangi process kullanıyor
@@ -80,12 +80,12 @@ if [ ! -z "$(cat /proc/mounts | grep ${islem})" ]; then
 	exit
 else
 	echo "Birim bağlanılıyor"
-	if [ ! -z "$(findmnt -S "/dev/${islem}")" ]; then
+	if [ ! -z "$(findmnt -S "/dev/${islem}")" ] ; then
 		echo "${blue}Bilgi!${normal}\tBu birim zaten farklı bir noktaya bağlanmış..!"
 		echo "biri çözülüp varsayılan noktaya bağlansın mı? (E/h)"
 		read cevap
 		
-		if [ ${cevap} == 'E' or ${cevap} == '']; then
+		if [ ${cevap} == 'E' or ${cevap} == ''] ; then
 			echo "Bölüm ayrılıyor"
 			sudo umount /dev/${islem}
 			echo "Bölüme varsayılan noktaya bağlanıyor"
