@@ -1,7 +1,9 @@
 ---
-isim: Özellik isteği
-hakkında: Bu proje için bir fikir önerin
-etiket: öneri
+name: Özellik isteği
+about: Bu proje için bir fikir önerin
+title: ''
+labels: öneri
+assignees: ''
 
 ---
 
