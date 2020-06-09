@@ -85,7 +85,7 @@ else
 		echo "biri çözülüp varsayılan noktaya bağlansın mı? (E/h)"
 		read cevap
 		
-		if [ ${cevap} == 'E' or ${cevap} == ''] ; then
+		if [ ${cevap} == 'E' or ${cevap} == '' ] ; then
 			echo "Bölüm ayrılıyor"
 			sudo umount /dev/${islem}
 			echo "Bölüme varsayılan noktaya bağlanıyor"
