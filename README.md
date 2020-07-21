@@ -14,6 +14,12 @@
 -  [ ] Otomatik olarak birimleri çözecek servis kodlanacak
 -  [ ] Mevcut bağlantıların hangi kullanıcı tarafından ve hangi yetkiler ile oluşturulduğu elde edilecek
 -  [ ] Birimler ile ilgili kural sistemi eklenecek (Detayları daha sonra dökümante edilecektir)
+-  [ ] GTK veya QT tabanlı grafik arayüzü oluşturulacak  
+ilgili arayüz üzerinden;
+- * [ ] fiziksel depolama birimlerinin listelenmesi
+- * [ ] birim adı, UUID bilgisi, bağlı olduğu dizin, kullanım durumu listelenecek
+- * [ ] açılır liste şeklinde, kullanılan diskleri hangi işlemlerin kullandığı, hangi yetki ile çalıştırıldığı vb. bilgiler sağlanacak
+- * [ ] disk bağlama, disk ayırma işlemleri için buton eklemesi yapılacak  
 -  [ ] Önerileriniz değerlendirilmeye alınacak
 
 ## Katkı
